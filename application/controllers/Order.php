@@ -37,7 +37,14 @@ class Order extends CI_Controller
         echo json_encode($result);
     }
     
-    
+        public function logout_user()//SALIR DEL SISTEMA
+    {
+        $confir = $this->orderP->logout_user();
+        if ($confir) {
+            $this->session->sess_destroy();
+            redirect("/", 'locations');
+        }
+    }
     
     
 

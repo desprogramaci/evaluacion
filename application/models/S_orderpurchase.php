@@ -78,6 +78,13 @@ class S_orderpurchase extends CI_Model
     }
     
     
+        public function logout_user()//salir del sistema Usuarios
+    {
+            $id_user_session=  $this->session->userdata('idUser');
+
+        return TRUE;
+    }
+    
 }
 
 ?>

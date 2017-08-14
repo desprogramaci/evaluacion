@@ -69,8 +69,9 @@ function base_url(){
 
 
 function ses_out(){
+
 	open_loading();
-		$.post(base_url()+"user/logout_user",{},function(data){
+		$.post(base_url()+"Order/logout_user",{},function(data){
 			redirect("inicio/", 0);	
 		});
 	close_loading();	
